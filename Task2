@@ -1,0 +1,19 @@
+class Solution { 
+public: 
+    bool isPalindrome(int num) { 
+        if (num < 0) { 
+            return false; 
+        } 
+ 
+        long int reverse = 0; 
+        long int original = num; 
+         
+        while (num != 0) { 
+            long int remainder = num % 10; 
+            reverse = reverse * 10 + remainder; 
+            num = num / 10; 
+        } 
+         
+        return original == reverse; 
+    } 
+};
